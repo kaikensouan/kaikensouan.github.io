@@ -246,19 +246,6 @@ a:active {
 	color: #73BCCD;
 	text-align: center;
 	}
-/*
-.header::before{
-	content: '';
-	position: absolute;
-	bottom: -1px;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width:  0 0 30px 100vw ;
-	border-color: transparent transparent #73BCCD transparent;
-	}
-*/
 h1 {
 	font-size: 30px;
 	color: #3D99B0;
@@ -325,15 +312,111 @@ h1 strong {
 		}
 	}
 
+
+
+.footer_top {
+	height: 60px;
+	margin-bottom: -2px;
+	background: #FFFFFF;
+	}
+.footer_top {
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	}
+.footer_top svg {
+	margin-top: -1px;
+	display: block;
+	width: 250%;
+	width: 120%;
+	height: 60px;
+	transform: rotate(180deg);
+	}
+.footer_top_inner .shape-fill {
+	fill: #73bccd;
+	}
+@media screen and (min-width: 540px) {
+	.footer_top {
+		height: 100px;
+		}
+	.footer_top_inner svg {
+		height: 100px;
+		}
+	}
+
+
+.footer {
+	padding: 50px 20px 20px 20px;
+	background-color: #FFFFFF;
+	text-align: center;
+	}
+.footer h1 {
+	color: #73BCCD;
+	font-size: 25px;
+	color: #3D99B0;
+	}
+.footer h1 strong {
+	font-size: 33px;
+	}
+@media screen and (max-width: 360px) {
+	.footer h1 {
+		font-size: 21px;
+		}
+	.footer h1 strong {
+		font-size: 27px;
+		}
+	}
+@media screen and (max-width: 300px) {
+	.footer h1 {
+		font-size: 15px;
+		}
+	.footer h1 strong {
+		font-size: 20px;
+		}
+	}
+@media screen and (min-width: 540px) {
+	.footer h1 {
+		font-size: 43px;
+		}
+	.footer h1 strong {
+		font-size: 49px;
+		}
+	}
+
+
+
+
 div#article-body {
 	background-color : #73BCCD;
 	line-height: 1.5em;
-	padding: 50px 0px 200px 0px;
+	padding: 50px 0px 100px 0px;
 	}
 
 div#article-body-inner {
 	max-width: 860px;
 	margin: auto;
+	}
+
+div.nav {
+	text-align: center;
+	margin-bottom: 50px;
+	}
+div.nav p {
+	margin-top: 15px;
+	}
+div.nav div.detail {
+	margin-top: 15px;
+	}
+div.nav div.description {
+	text-align: center;
+	background: #DDFFFF;
+	margin: 5px 15px;
+	padding: 15px;
+	border-radius: 10px;
+	}
+div.nav div.description a {
+	white-space: nowrap;
+	margin: 5px;
 	}
 
 div.article {
@@ -616,6 +699,9 @@ h2.transparent:after {
 
 
 
+
+
+
 .hide {
 	display: none;
 	}
@@ -635,7 +721,7 @@ h2.transparent:after {
 </div>
 
 <div class='header_bottom'>
-	<div class='header_bottom_inner'>
+	<div class='header_bottom_inner' id='header_wave'>
 		<svg data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'>
 			<path d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' class='shape-fill'></path>
 		</svg>
@@ -644,6 +730,36 @@ h2.transparent:after {
 
 <div id='article-body'>
 	<div id='article-body-inner'>
+
+
+		<div class='nav'>
+				<div class='detail'><a href='javascript:void(0);' class='detail_button'>▼ 目次 ▼</a></div>
+				<div class='description'>
+					<a href='#0'>前文</a>
+					<a href='#9'>第９条</a>
+					<a href='#12'>第１２条</a>
+					<a href='#18'>第１８条</a>
+					<a href='#19-2'>第１９条の２</a>
+					<a href='#20'>第２０条</a>
+					<a href='#21'>第２１条</a>
+					<a href='#21-2'>第２１条の２</a>
+					<a href='#22'>第２２条</a>
+					<a href='#24'>第２４条</a>
+					<a href='#24-2'>第２４条の２</a>
+					<a href='#29-2'>第２９条の２</a>
+					<a href='#47'>第４７条</a>
+					<a href='#56'>第５６条</a>
+					<a href='#66'>第６６条</a>
+					<a href='#77'>第７７条</a>
+					<a href='#83-2'>第８３条の２</a>
+					<a href='#94'>第９４条</a>
+					<a href='#96'>第９６条</a>
+					<a href='#97'>第９７条</a>
+					<a href='#98'>第９８条</a>
+					<a href='#99'>第９９条</a>
+					<a href='#footer'>引用元</a>
+				</div>
+		</div><!-- END class='nav' -->
 
 
 		<div class='article' id='0'>
@@ -1348,6 +1464,35 @@ h2.transparent:after {
 	</div><!-- END id='article-body-inner' -->
 </div><!-- END id='article-body' -->
 
+
+
+<div class='footer_top'>
+	<div class='footer_top_inner'>
+		<svg data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'>
+			<path d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' class='shape-fill'></path>
+		</svg>
+	</div>
+</div><!-- END class='footer_top' -->
+
+<div class='footer' id='footer'>
+	<h1 class='footer_h1'>詳しくは<strong>自民党</strong>の<br><strong>日本国憲法改正草案</strong>を<br><strong>ご覧ください</strong></h1>
+	<div class='nav'>
+		<p>▼ 引用元 ▼</p>
+		<p>
+			<a href='https://constitution.jimin.jp/document/draft/' target='_blank' rel='noopener noreferrer'>自民党公式サイト 日本国憲法改正草案</a>
+		</p>
+		<p>
+			<a href='https://constitution.jimin.jp/document/faq/' target='_blank' rel='noopener noreferrer'>自民党 日本国憲法改正草案Q&A</a>
+		</p>
+		<p>
+			<a href='http://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/shiryo/dl-constitution.htm' target='_blank' rel='noopener noreferrer'>衆議院公式サイト 日本国憲法（全文）</a>
+		</p>
+	</div><!-- END class='nav' -->
+</div><!-- END class='footer' -->
+
+
+
+
 <div id='ribbon_container'>
 	<svg class='ribbon' version='1.0' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280.000000 640.000000' preserveAspectRatio='xMidYMid meet'>
 		<g transform='translate(0.000000,640.000000) scale(0.100000,-0.100000)' fill='#033B85' stroke='none'>
@@ -1397,6 +1542,7 @@ l346 53 6 35 c3 19 6 77 6 127 0 51 4 92 9 90 5 -1 23 17 40 41 17 23 37 42
 		animate( 'article', 'zoomIn', 0.8, 'faster' );
 		animate( 'point', 'zoomIn', 0.9, 'faster', 'delay-05s' );
 		animate( 'supplement', 'zoomIn', 0.9, 'faster', 'delay-1s' );
+		animate( 'footer', 'zoomIn', 0.9, 'faster' );
 	});
 	
 	[].forEach.call( document.getElementsByClassName('detail_button'), function(e,i){
