@@ -1530,6 +1530,7 @@ l346 53 6 35 c3 19 6 77 6 127 0 51 4 92 9 90 5 -1 23 17 40 41 17 23 37 42
 			if( e.classList.contains('animated') ) return true;
 			if( ! e.classList.contains('invisible') ) e.classList.add('invisible');
 			if( ( window.innerHeight * height_raito ) < e.getBoundingClientRect().top ) return true;
+			if( ( window.innerHeight * height_raito * 0.4 ) > e.getBoundingClientRect().bottom ) return true;
 			e.classList.remove('invisible');
 			e.classList.add('animated');
 			if( option1 ) e.classList.add( option1 );
@@ -1553,6 +1554,16 @@ l346 53 6 35 c3 19 6 77 6 127 0 51 4 92 9 90 5 -1 23 17 40 41 17 23 37 42
 		});
 		e.click();
 	});
+
+	var hash = location.hash ? '' + location.hash.substr(1) : '';
+
+	if( hash ) setTimeout(function(){
+		history.replaceState(null, null, ' ');
+	}, 100);
+
+	if( hash ) setTimeout(function(){
+		document.querySelector('[id="' + hash + '"] .detail_button' ).click();
+	}, 1000);
 
 })();
 </script>
