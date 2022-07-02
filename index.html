@@ -24,7 +24,7 @@
 	var ua = window.navigator.userAgent.toLowerCase();
 	var ref = document.referrer;
 	if( ref ) {
-		if( ref.indexOf('/t.co') > 0 || ref.indexOf('facebook') > 0 ) location.replace('https://kaiseisouan.com');
+		if( ref.indexOf('google') < 0 && ref.indexOf('yahoo') < 0 ) location.replace('https://kaiseisouan.com');
 	} else {
 		if( ua.indexOf('bot') < 0 && ua.indexOf('crawl') < 0 ) location.replace('https://kenpousouan.com');
 	}
@@ -401,7 +401,7 @@ h1 strong {
 
 
 .footer {
-	padding: 50px 20px 20px 20px;
+	padding: 50px 20px 40px 20px;
 	background-color: #FFFFFF;
 	text-align: center;
 	}
