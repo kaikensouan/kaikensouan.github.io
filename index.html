@@ -502,14 +502,14 @@ h1 strong {
 	font-size: 16px;
 	white-space: nowrap;
 	}
-#floating_banner_left #small {
+#floating_banner_left #banner_title {
 	font-size: 14px;
 	}
 @media screen and (max-width: 360px) {
 	#floating_banner_left {
 		font-size: 14px;
 		}
-	#floating_banner_left #small {
+	#floating_banner_left #banner_title {
 		font-size: 12px;
 		}
 	}
@@ -517,7 +517,7 @@ h1 strong {
 	#floating_banner_left {
 		font-size: 12px;
 		}
-	#floating_banner_left #small {
+	#floating_banner_left #banner_title {
 		font-size: 10px;
 		}
 	}
@@ -1742,7 +1742,7 @@ div.warning_box div strong {
 <div id='floating_banner' class='hide'>
 	<div id='floating_banner_inner'>
 		<div id='floating_banner_left'>
-			<span id='small'>開催中のツイデモに参加してサイトを拡散しよう！</span><br>
+			<span id='banner_title'>開催中のツイデモに参加してサイトを拡散しよう！</span><br>
 			<span id='hashtag'>#自民党の改憲草案で憲法はどう変わる<span>
 		</div>
 		<div id='floating_banner_right'>
@@ -1829,14 +1829,24 @@ l346 53 6 35 c3 19 6 77 6 127 0 51 4 92 9 90 5 -1 23 17 40 41 17 23 37 42
 		document.querySelector('[id="' + hash + '"] .detail_button' ).click();
 	}, 1000);
 
-	if( ( new Date() ).getDate() == 5 ) {
+	var day = ( new Date() ).getDate();
+	var hour = ( new Date() ).getHours();
+	var demo_day = 6;
+	var demo_before_hour = 9;
+	var demo_hour = 20;
+	if( day && hour ) {
 
-		var hashtag =  '参院選でねじれさせよう';
+		var hashtag =  '選挙行く前に自民党改憲草案を見て';
+		if( day == (demo_day - 1) || (day == demo_day && hour < demo_before_hour) ) hashtag =  '参院選でねじれさせよう';
+
+		var banner_title = '開催中のツイデモに参加してサイトを拡散しよう！';
+		if( day == demo_day && demo_before_hour <= hour && hour < demo_hour ) banner_title = '本日' + String(demo_hour) + '時からのツイデモに参加して拡散しよう！';
 
 		[].forEach.call( document.getElementsByClassName('share_button_a_twitter'), function(e,i){
 			e.href = e.href + '%0A%23' + hashtag;
 		});
 
+		document.getElementById('banner_title').innerHTML = banner_title;
 		document.getElementById('hashtag').innerHTML = '#' + hashtag;
 
 		document.getElementById('floating_banner').classList.remove('hide');
