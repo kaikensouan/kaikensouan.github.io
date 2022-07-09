@@ -24,9 +24,9 @@
 	var ua = window.navigator.userAgent.toLowerCase();
 	var ref = document.referrer;
 	if( ref ) {
-		if( ref.indexOf('google') < 0 && ref.indexOf('yahoo') < 0 ) location.replace('https://kenpouhikaku.com');
+		if( ref.indexOf('google') < 0 && ref.indexOf('yahoo') < 0 ) location.replace('https://kenpouhikaku.com/'+location.hash);
 	} else {
-		if( ua.indexOf('bot') < 0 && ua.indexOf('crawl') < 0 ) location.replace('https://kenpouhikaku.com');
+		if( ua.indexOf('bot') < 0 && ua.indexOf('crawl') < 0 ) location.replace('https://kenpouhikaku.com/'+location.hash);
 	}
 })();
 </script>
