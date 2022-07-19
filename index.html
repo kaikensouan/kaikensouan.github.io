@@ -530,6 +530,21 @@ h1 strong {
 #floating_banner_right a.share_button_a{
 	margin: 0px;
 	}
+#floating_banner_del_button {
+	position: fixed;
+	margin: 0px;
+	padding: 0px;
+	bottom: 60px;
+	left: 0px;
+	width: 20px;
+	height: 16px;
+	line-height: 16px;
+	border-radius: 3px 3px 0px 0px;
+	background: rgba(238, 238, 238, 0.3);
+	color: rgba(100, 100, 100, 0.5);
+	text-align: center;
+	cursor: pointer;
+	}
 
 
 
@@ -1765,7 +1780,7 @@ div.warning_box div strong {
 					<a href='https://www.excite.co.jp/news/article/Litera_litera_12006/' target='_blank' rel='noopener noreferrer'>安倍晋三が統一教会イベントでトランプと共演</a><br>
 
 					<br><span>参考動画</span><br>
-					<a href='https://youtu.be/QQPc644aNMs' target='_blank' rel='noopener noreferrer'>全国霊感商法対策弁護士連絡会が記者会見</a><br>
+					<a href='https://youtu.be/02NNklMqMss' target='_blank' rel='noopener noreferrer'>全国霊感商法対策弁護士連絡会が記者会見</a><br>
 					<a href='https://youtu.be/Zfj5JCzXFdI' target='_blank' rel='noopener noreferrer'>創生「日本」第3回東京研修会③</a><br>
 				</div>
 			</div>
@@ -1789,6 +1804,7 @@ div.warning_box div strong {
 			</a>
 		</div>
 	</div>
+	<div id='floating_banner_del_button'>×</div>
 </div><!-- END id='floating_banner' -->
 
 
@@ -1886,6 +1902,10 @@ l346 53 6 35 c3 19 6 77 6 127 0 51 4 92 9 90 5 -1 23 17 40 41 17 23 37 42
 		document.getElementById('hashtag').innerHTML = '#' + hashtag;
 
 		document.getElementById('floating_banner').classList.remove('hide');
+
+		document.getElementById('floating_banner_del_button').addEventListener('click', function(){
+			document.getElementById('floating_banner').classList.add('hide');
+		});
 
 	}
 
